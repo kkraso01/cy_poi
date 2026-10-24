@@ -1,0 +1,17 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+artifacts/
+*.osm.pbf
+*.sqlite
+*.sqlite.gz
+*.partial
+*.node-index
+*.sig
+!manifest.json.sig
+*.pem
+!keys/update-public-key.pem

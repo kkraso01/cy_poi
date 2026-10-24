@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='cy_poi-test'>
+  <node id='1' lat='35.0000' lon='33.0000'/>
+  <node id='2' lat='35.0000' lon='33.0020'/>
+  <node id='3' lat='35.0020' lon='33.0020'/>
+  <node id='4' lat='35.0020' lon='33.0000'/>
+  <node id='5' lat='35.0100' lon='33.0100'/>
+  <node id='6' lat='35.0100' lon='33.0120'/>
+  <node id='7' lat='35.0120' lon='33.0120'/>
+  <node id='8' lat='35.0120' lon='33.0100'/>
+  <node id='9' lat='35.0200' lon='33.0200'><tag k='amenity' v='drinking_water'/><tag k='name' v='Νερό'/></node>
+  <way id='10'>
+    <nd ref='1'/><nd ref='2'/><nd ref='3'/><nd ref='4'/><nd ref='1'/>
+    <tag k='amenity' v='cafe'/><tag k='name' v='Polygon café'/>
+  </way>
+  <way id='20'><nd ref='5'/><nd ref='6'/><nd ref='7'/><nd ref='8'/><nd ref='5'/></way>
+  <relation id='100'>
+    <member type='way' ref='20' role='outer'/>
+    <tag k='type' v='multipolygon'/><tag k='amenity' v='school'/><tag k='name' v='Relation school'/>
+  </relation>
+</osm>
