@@ -28,7 +28,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           VERSION="$(date -u +%Y%m%d).${GITHUB_RUN_NUMBER}"
-          ASSET="cyprus-poi-${VERSION}.sqlite.gz"
+          ASSET="cyprus-poi-${VERSION//./-}.sqlite.gz"
           URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/beta/${ASSET}"
           python scripts/build_snapshot.py --output-dir artifacts/beta --version "$VERSION" --artifact-url "$URL"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
