@@ -31,8 +31,11 @@ jobs:
           ASSET="cyprus-poi-${VERSION//./-}.sqlite.gz"
           URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/beta/${ASSET}"
           python scripts/build_snapshot.py --output-dir artifacts/beta --version "$VERSION" --artifact-url "$URL"
+          REPORT="validation-report-${VERSION//./-}.json"
+          mv artifacts/beta/validation-report.json "artifacts/beta/$REPORT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "asset=$ASSET" >> "$GITHUB_OUTPUT"
+          echo "report=$REPORT" >> "$GITHUB_OUTPUT"
       - name: Validate snapshot and manifest
         run: python scripts/validate_release.py --archive 'artifacts/beta/${{ steps.build.outputs.asset }}' --manifest artifacts/beta/manifest.json
       - name: Sign beta manifest with beta key
@@ -45,7 +48,7 @@ jobs:
       - name: Upload immutable snapshot asset to beta release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload beta 'artifacts/beta/${{ steps.build.outputs.asset }}' 'artifacts/beta/validation-report.json' --repo "$GITHUB_REPOSITORY"
+        run: gh release upload beta 'artifacts/beta/${{ steps.build.outputs.asset }}' 'artifacts/beta/${{ steps.build.outputs.report }}' --repo "$GITHUB_REPOSITORY"
       - name: Verify public release asset before publishing beta manifest
         run: |
           URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/beta/${{ steps.build.outputs.asset }}"
