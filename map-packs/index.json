@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "tag": "maps-2026-10-22",
+  "regions": [
+    {
+      "id": "andorra",
+      "name": "Andorra",
+      "coverage": {
+        "maxLat": 42.66,
+        "maxLon": 1.79,
+        "minLat": 42.42,
+        "minLon": 1.4
+      },
+      "file": "andorra-offline-2026-10-22.zip",
+      "bytes": 12169478,
+      "sha256": "6c34ad11c959bea0fb81d3830ac3025ac02d9c92a311fee96160b16fe7d01082",
+      "url": "https://github.com/kkraso01/cy_poi/releases/download/maps-2026-10-22/andorra-offline-2026-10-22.zip"
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "coverage": {
+        "maxLat": 41.8,
+        "maxLon": 29.75,
+        "minLat": 34.7,
+        "minLon": 19.3
+      },
+      "file": "greece-offline-2026-10-22.zip",
+      "bytes": 1575052696,
+      "sha256": "6299226dd3daf46d390a4e6ff894b13666994b98e105b60b9d920e96412e626c",
+      "url": "https://github.com/kkraso01/cy_poi/releases/download/maps-2026-10-22/greece-offline-2026-10-22.zip"
+    },
+    {
+      "id": "luxembourg",
+      "name": "Luxembourg",
+      "coverage": {
+        "maxLat": 50.19,
+        "maxLon": 6.54,
+        "minLat": 49.44,
+        "minLon": 5.73
+      },
+      "file": "luxembourg-offline-2026-10-22.zip",
+      "bytes": 148118256,
+      "sha256": "0754db7e2411334fe8efcd06c517ceee505d6c93c7ebcf41cb2ae92b63956d09",
+      "url": "https://github.com/kkraso01/cy_poi/releases/download/maps-2026-10-22/luxembourg-offline-2026-10-22.zip"
+    },
+    {
+      "id": "malta",
+      "name": "Malta",
+      "coverage": {
+        "maxLat": 36.1,
+        "maxLon": 14.6,
+        "minLat": 35.78,
+        "minLon": 14.17
+      },
+      "file": "malta-offline-2026-10-22.zip",
+      "bytes": 22784536,
+      "sha256": "302bfd13e3593d4aaef5e1df420595be9929b3028e5cf31d67823e1f899028b8",
+      "url": "https://github.com/kkraso01/cy_poi/releases/download/maps-2026-10-22/malta-offline-2026-10-22.zip"
+    }
+  ]
+}
